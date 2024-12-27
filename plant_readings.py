@@ -8,32 +8,6 @@ import threading
 # Blynk authentication token
 BLYNK_AUTH = 'GnAWG9Q0XM3vh3QFDOfTnHSi2AmyZyty'
 
-blynk = BlynkLib.Blynk('GnAWG9Q0XM3vh3QFDOfTnHSi2AmyZyty')
-
-# ThingSpeak channel details
-THINGSPEAK_WRITE_API_KEY = '4GS7KZYMXUMMVFOW'
-THINGSPEAK_URL = 'https://api.thingspeak.com/update'
-
-# Initialize SenseHat
-sense = SenseHat()
-
-# Get data from SenseHat
-def get_sense_hat_data():
-    temperature = sense.get_temperature()
-    humidity = sense.get_humidity()
-    pressure = sense.get_pressure()
-    return temperature, humidity, pressure
-
-import requests
-import time
-from sense_hat import SenseHat
-import BlynkLib
-from time import sleep
-import threading
-
-# Blynk authentication token
-BLYNK_AUTH = 'GnAWG9Q0XM3vh3QFDOfTnHSi2AmyZyty'
-
 # Initialise the Blynk instance
 blynk = BlynkLib.Blynk('GnAWG9Q0XM3vh3QFDOfTnHSi2AmyZyty')
 
